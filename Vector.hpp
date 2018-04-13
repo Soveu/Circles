@@ -2,25 +2,16 @@
 #include <cmath>
 #include <SFML/Vector2.hpp>
 
-// template <typename T>
-// struct Coord{
-//     T x;
-//     T y;
+typedef Vector2<double> Vector2d;
 
-//     Coord(T a, T b) : x(a), y(b);
-//     Coord();
-// };
-
-class Vector : Angle, Vector2f{
+class Vector : Angle, Vector2d{
 protected:
-    void vectorToXY();
-public:
     int vectorValue;
+    //Vector2d vals; //vector splitted to X and Y coordinates
 
-    Vector(int, double, double, int);
-    Vector(Angle, Vector2f, int);
-    Vector(const Vector &);
-    Vector(Angle, double, double, int);
-    Vector(int, Vector2f, int);
+    void vecToXY();
+public:
     Vector();
+    Vector(const int&, const Angle&);
+    Vector(const Vector&);
 };
