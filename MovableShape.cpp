@@ -10,7 +10,11 @@ void MovableShape::move(){
 //Constructors
 
 MovableShape::MovableShape() {};
+
 MovableShape::MovableShape(const sf::Shape& s, const MovableObj& m) :
     sf::Shape(s),
     MovableObj(m) {};
-//MovableShape::MovableShape(const MovableShape& ms); //TODO
+
+MovableShape::MovableShape(const MovableShape& ms) :
+    MovableObj(ms.speedVec),
+    sf::Shape() {};

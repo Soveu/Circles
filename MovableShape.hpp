@@ -8,5 +8,5 @@ public:
     
     MovableShape();
     MovableShape(const sf::Shape&, const MovableObj&);
-    //MovableShape(const MovableShape&); //TODO
+    MovableShape(const MovableShape&); //
 }

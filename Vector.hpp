@@ -11,6 +11,9 @@ protected:
 
     void vecToXY();
 public:
+    void setDegree(int);
+    void setRadian(double);
+
     Vector();
     Vector(const int&, const Angle&);
     Vector(const Vector&);

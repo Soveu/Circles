@@ -32,5 +32,5 @@ void Angle::setRadian(double a){
 
 Angle::Angle() : angle(0){}; //default constructor
 Angle::Angle(int x) : angle(x){}; //please use 0-359
-Angle::Angle(double x) : angle(x){}; //WARNING -> constructor for radians
+Angle::Angle(double x) : angle(){ setRadian(x); }; //WARNING -> constructor for radians
 Angle::Angle(const Angle& a) : angle(a.angle){}; //copy constructor
